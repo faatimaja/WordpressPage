@@ -1,0 +1,90 @@
+.page_not_found{
+    background-color: #f2f2f2;      
+    padding-bottom: 7rem;  // da li?
+    padding-top: 6.2rem;  // da li?
+    @media screen and (min-width: $widescreen) and (max-width:$fullhd - 1px){
+        padding-bottom:0;
+        padding-top:0;
+    }
+    @media screen and (min-width: $desktop) and (max-width:$widescreen - 1px){
+        padding-bottom:2rem;
+        padding-top:0;
+    }
+    @media screen and (min-width: $tablet) and (max-width:$desktop - 1px){
+        padding-top:0.5rem;
+        padding-bottom:0;
+    }
+    @media screen and (min-width: $mobile) and (max-width:$tablet - 1px){
+        padding-top: 7rem;
+        padding-bottom:6.3rem;  
+    }
+    @media screen and (max-width:$mobile - 1px){
+
+    }
+ 
+
+    .container{
+        display:grid;
+        .broj_greske{
+            color: $main-color;
+            font-weight: 900;
+            font-size: 7rem;
+            text-align: center;
+            margin: 1rem auto 3rem;
+            background: transparent;
+            padding: 0rem 6rem;
+            @media screen and (min-width: $desktop) and (max-width:$widescreen - 1px){
+                font-size: 6rem;
+            }
+            @media screen and (min-width: $tablet) and (max-width:$desktop - 1px){
+                font-size: 5.5rem;
+            }
+            @media screen and (min-width: $mobile) and (max-width:$tablet - 1px){
+                font-size: 4.5rem;
+            }
+            @media screen and (max-width:$mobile - 1px){
+                font-size: 3.5rem;
+            }
+        }
+        .veliki_naslov{
+            margin-top: -4rem;
+            color: #667783;
+            font-size: 2rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 0;
+            @media screen and (min-width: $desktop) and (max-width:$widescreen - 1px){
+                font-size: 1.7rem;
+            }
+            @media screen and (min-width: $tablet) and (max-width:$desktop - 1px){
+                font-size: 1.5rem;
+            }
+            @media screen and (min-width: $mobile) and (max-width:$tablet - 1px){
+                font-size: 1.3rem;
+                margin-top: -2.8rem;
+            }
+            @media screen and (max-width:$mobile - 1px){
+                font-size: 1.2rem;
+                margin-top: -3rem;
+            }
+        }
+        .tekst_greske{
+            font-size: 1rem;
+            color: #667783;
+            text-align: center;
+            margin-top: -.7rem;
+            @media screen and (min-width: $desktop) and (max-width:$widescreen - 1px){
+                font-size: 0.9rem;
+            }
+            @media screen and (min-width: $mobile) and (max-width:$tablet - 1px){
+                font-size: 0.8rem;
+                margin-top: 0;
+                padding-bottom: 3rem;
+            }
+            @media screen and (max-width:$mobile - 1px){
+                font-size: 0.9rem;
+                margin-top:-.1rem;
+            }
+        }
+    }  
+}

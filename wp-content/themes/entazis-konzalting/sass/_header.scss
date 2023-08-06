@@ -1,0 +1,203 @@
+$fullhd: 1480px;
+$widescreen: 1216px;
+$desktop: 1024px;
+$tablet: 769px;
+$mobile: 480px;
+
+#header{
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  padding: 0;
+  padding-top: 1.5rem;
+  z-index: 999;
+  .container{
+    .logo{
+      padding: 0;
+      margin: auto;
+      line-height: 0;
+      @media screen and (min-width: $widescreen) and (max-width:$fullhd - 1px){
+        margin-top: -0.187rem;
+        width:17.1rem;
+        height:auto,
+      }
+      @media screen and (min-width: $desktop) and (max-width:$widescreen - 1px){
+        width: 14rem;
+        height: auto;
+      }
+      @media screen and (min-width: $tablet) and (max-width:$desktop - 1px){
+        width:11rem;
+        height:auto;
+        margin-left: 0;
+      }
+      @media screen and (min-width: $mobile) and (max-width:$tablet - 1px){
+        margin-top: 0.5rem; 
+        margin-left:0;
+        width: 14rem;
+        height:auto;
+      }
+      @media screen and (max-width:$mobile - 1px){
+        margin-top: 0.38rem;
+        margin-left: 0; 
+        width: 12rem;
+        height: auto;
+      }
+      img{
+        max-height: unset;
+        width: 330px;
+      }
+    }   
+
+    .menu-mobile-bar{
+      width: 2.2rem;
+      height: 2.2rem;
+      display: block;
+      background: url(./img/menu-mobile-white.svg) center no-repeat;
+      background-size: 2rem;
+      margin: auto 0 auto auto;
+      cursor: pointer;
+      display: none;
+      @media screen and (max-width:$tablet - 1px){
+        display: block;
+      }
+      &:visited{
+        background: url(./img/mobile-menu.svg) center no-repeat;
+      }  //?
+    }
+    .navbar-menu{
+      @media screen and (min-width: $tablet) and (max-width:$desktop - 1px){
+        background-color: transparent;
+        display:block;
+      }
+      &.mobile{
+        background-color: $main-black;
+      }
+      &.is-active{
+        background: transparent;
+      }
+
+      @media screen and (max-width:$tablet - 1px){
+        display:block;
+        left: 0;
+        top: 100%;
+        position: absolute;
+        width: 100%;
+        height: auto;
+        background: $main-color;
+        opacity: 0;
+        visibility: hidden;
+        &.mobile{
+          opacity: 1;
+          visibility: visible;
+        
+        }
+ 
+      }  
+    }
+      .navbar-end{
+        .menu-main-menu-container{
+          ul{
+            list-style: none;
+            display: flex;
+            margin:auto 0 auto auto;
+            @media screen and (min-width: $mobile) and (max-width:$tablet - 1px){
+              display: grid;
+            }
+            @media screen and (max-width:$mobile - 1px){
+              display: grid;
+            }
+            li{   
+              display: inline-block;
+              margin: auto;
+              @media screen and (min-width: $tablet) and (max-width:$desktop - 1px){
+         
+              }
+              @media screen and (min-width: $mobile) and (max-width:$tablet - 1px){
+                display: block;
+                text-align: center;
+                width: 100%;
+              } 
+              a{  
+                font-size: 1.25rem;
+                font-family: $main-font;
+                color: white;
+                font-weight:500;
+                padding-left:1.875rem;
+                transition: 0.2s;
+                &:hover{
+                  color:$main-color;
+                  opacity: 0.8;
+                }
+                @media screen and (min-width: $widescreen) and (max-width:$fullhd - 1px){
+                  font-size: 1rem;
+                }
+                @media screen and (min-width: $desktop) and (max-width:$widescreen - 1px){
+                  font-size: 0.8rem;
+                }
+                @media screen and (min-width: $tablet) and (max-width:$desktop - 1px){
+                  font-size:0.65rem;
+                }
+                @media screen and (min-width: $mobile) and (max-width:$tablet - 1px){
+                  font-size: 0.6rem;
+                }
+                @media screen and (max-width:$mobile - 1px){
+                  //font-size:0.5rem;                   
+                }
+              }
+              &.contact-button{
+                font-size: 1.125rem;
+                margin-left: 4rem;
+                border-radius:0;
+                width: 17.5rem;
+                padding:0.8rem;  
+                background-color: $main-color;
+                font-weight:bold;
+                box-shadow: 0px 3px 6px #876F57;
+                border:none;
+                transition: 0.3s;
+                @media screen and (min-width: $widescreen) and (max-width:$fullhd - 1px){
+                  font-size: 0.95rem;
+                  width:14.7rem; 
+                  margin-left: 2.2rem;
+                  padding-left: 0.2rem;
+                  padding-right:0.2rem;         
+                }
+                @media screen and (min-width: $desktop) and (max-width:$widescreen - 1px){
+                  font-size: 0.85rem;
+                  width: 13.5rem;
+                  margin-left: 2.1rem;
+                  padding-left:0.2rem;
+                  padding-right:0.2rem;
+                }
+                @media screen and (min-width: $tablet) and (max-width:$desktop - 1px){
+                  font-size:0.6rem;
+                  margin-left: 2rem;
+                  width:10rem;
+                  padding:0.5rem;  
+                }
+                @media screen and (min-width: $mobile) and (max-width:$tablet - 1px){
+                  margin-left: 0;
+                  width: 0;
+                  padding:0;  
+                  font-weight:500;
+                  box-shadow: 0px 0px 0px;
+                  border:none;
+                 // transition: 0;
+                }
+                a{
+                  font-weight: bold;
+                }
+                &:hover{
+                  background-color: white;
+                  box-shadow: none;
+                  color: $main-color;
+                }
+              }
+          }
+        }
+
+      }
+    } 
+  }
+}
